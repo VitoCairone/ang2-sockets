@@ -1,0 +1,24 @@
+{
+  "name": "ang2-sockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitoCairone/ang2-sockets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitoCairone/ang2-sockets/issues"
+  },
+  "homepage": "https://github.com/VitoCairone/ang2-sockets#readme",
+  "dependencies": {
+    "socket.io": "^2.0.1",
+    "websocket": "^1.0.24"
+  }
+}

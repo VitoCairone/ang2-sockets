@@ -2,12 +2,37 @@
 <HEAD>
 <SCRIPT>
 
+/* Client-Side JS WebSocket API */
+
 if ('WebSocket' in window) {
   alert('Pass');
-   /* WebSocket is supported. You can proceed with your code*/
+
+  var sever_path = "thisisprobablynotarealdomain.com"
+
+  var connection = new WebSocket('ws://' + server_path);
+
+  connection.onopen = function () {
+     /*Send a small message to the console once the connection is established */
+     console.log('Connection open!');
+  }
+
+  connection.onclose = function () {
+    console.log('Connection closed');
+  }
+
+  connection.onerror = function (error) {
+    console.log('Error detected: ' + error);
+  }
+
+  connection.onmessage = function (event) {
+    var message = event.data;
+    console.log(message);
+  }
+
+   /* WebSocket is supported. You can proceed with your code */
 } else {
   alert('Fail');
-   /*WebSockets are not supported. Try a fallback method like long-polling etc*/
+   /* WebSockets are not supported. Try a fallback method like long-polling etc */
 }
 
 </SCRIPT>
